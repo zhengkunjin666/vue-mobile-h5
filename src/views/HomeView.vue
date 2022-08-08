@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="card-list">
+      <div class="card-item"></div>
+      <div class="card-item"></div>
+      <div class="card-item"></div>
+    </div>
+    <van-button type="primary">默认按钮</van-button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import { Button } from "vant";
 
 export default {
-  name: "HomeView",
   components: {
-    HelloWorld,
+    "van-button": Button,
   },
 };
 </script>
+<style lang="less">
+.card-item {
+  display: inline-block;
+  width: (375px /2);
+  height: 20px;
+  vertical-align: top;
+  margin-bottom: 10px;
+  background: #f1f1f1;
+  font-size: 14px;
+}
+</style>
